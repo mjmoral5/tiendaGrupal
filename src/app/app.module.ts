@@ -16,6 +16,7 @@ import { DetalleUsuarioComponent } from './pages/detalle-usuario/detalle-usuario
 import { AddUserComponent } from './pages/add-user/add-user.component';
 import { EditUserComponent } from './pages/edit-user/edit-user.component';
 import { DeleteUserComponent } from './pages/delete-user/delete-user.component';
+import { PersonaServiceService } from './services/persona-service.service';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { DeleteUserComponent } from './pages/delete-user/delete-user.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PersonaServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
