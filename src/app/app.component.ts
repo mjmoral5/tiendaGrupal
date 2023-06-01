@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ProductItem } from './model/product-item';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +6,4 @@ import { ProductItem } from './model/product-item';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tienda-online';
-
-  
 }

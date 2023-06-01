@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Persona } from 'src/app/model/persona';
 
 @Component({
   selector: 'app-detalle-usuario',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./detalle-usuario.component.css']
 })
 export class DetalleUsuarioComponent {
+  @Input() persona: Persona = new Persona(0, "", "", 0, "");
 
+  usuarioId: string | null = "";
+
+  constructor(route: ActivatedRoute) {
+    this.usuarioId = route.snapshot.paramMap.get('id');
+  }
 }

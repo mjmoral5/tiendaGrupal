@@ -1,3 +1,14 @@
-<p>lista-usuarios works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor="let usuario of usuarios">
+            <a [routerLink]="['/usuario', usuario.id]">
+                <app-detalle-usuario [persona]="usuario"></app-detalle-usuario>
+            </a>
+            <a [routerLink]="['/usuarios/delete', usuario.id]">
+                <app-delete-user></app-delete-user>
 
-<a [routerLink]="['/usuario', 1]">HOla</a>
+                <button (click)="deleteUser(usuario.id)">Eliminar</button>
+            </a>
+        </div>
+    </div>
+</div>
